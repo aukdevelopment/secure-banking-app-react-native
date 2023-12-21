@@ -25,7 +25,7 @@ const Layout = () => {
   }
 
   return (
-    <View style={{ paddingTop: height, flex: 1, backgroundColor: "#101010" }}>
+    <View style={{ paddingTop: height, flex: 1 }}>
       <AppStatusBar />
       <Slot />
     </View>

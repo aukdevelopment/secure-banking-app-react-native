@@ -2,14 +2,17 @@ import React from "react";
 import { View, ScrollView, TouchableOpacity, Dimensions } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
-import { PoppinsRegular } from "../layout/poppins-fonts";
-import AccountDetails from "../components/account-details";
+import { PoppinsRegular } from "../../layout/poppins-fonts";
+import AccountDetails from "../../components/account-details";
 
 const { width: dWidth } = Dimensions.get("window");
 
 const Home = () => {
   return (
-    <ScrollView className=" h-full w-full" showsVerticalScrollIndicator={false}>
+    <ScrollView
+      className=" h-full w-full bg-[#101010]"
+      showsVerticalScrollIndicator={false}
+    >
       {/* Account Card */}
       <AccountDetails />
       {/* Service Section */}
@@ -26,7 +29,7 @@ export default Home;
 
 const ServiceSection = () => {
   return (
-    <View className=" w-full p-5 pt-2 flex-row flex-wrap items-center justify-between">
+    <View className=" w-full p-5 pt-7 flex-row flex-wrap items-center justify-between">
       <ServiceBlock icon="mobile-phone" title="Reload" />
       <ServiceBlock icon="bank" title="Bank Transfer" />
       <ServiceBlock icon="file-text-o" title="Bill Payment" />
