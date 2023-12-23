@@ -1,5 +1,5 @@
 import { Drawer } from "expo-router/drawer";
-import { ScrollView } from "react-native";
+import MobileMenu from "../../layout/mobile-menu";
 
 const DrawerLayout = () => {
   return (
@@ -13,7 +13,3 @@ const DrawerLayout = () => {
 };
 
 export default DrawerLayout;
-
-const MobileMenu = () => {
-  return <ScrollView className=" w-full flex-1 bg-red-600"></ScrollView>;
-};

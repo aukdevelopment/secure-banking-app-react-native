@@ -29,7 +29,7 @@ const AccountDetails = () => {
   return (
     <View className=" w-full pb-5 px-3 bg-orange-100 rounded-b-3xl">
       {/* Details */}
-      <View className=" w-full flex-row items-center justify-between mt-3 px-5 mb-12">
+      <View className=" w-full flex-row items-center justify-between mt-3 px-2 mb-12">
         {/* menu icon */}
         <TouchableOpacity onPress={() => navigation.openDrawer()}>
           <Feather name="menu" size={24} color="rgb(234 88 12)" />
