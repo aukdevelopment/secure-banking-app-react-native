@@ -6,14 +6,9 @@ import {
   Dimensions,
   Text,
 } from "react-native";
-import {
-  PoppinsMedium,
-  PoppinsRegular,
-  PoppinsSemiBold,
-} from "../layout/poppins-fonts";
+import { PoppinsMedium, PoppinsSemiBold } from "../layout/poppins-fonts";
 import { Feather } from "@expo/vector-icons";
 import { useNavigation } from "expo-router";
-import Swiper from "./swiper";
 
 interface INavigation {
   openDrawer: () => void;

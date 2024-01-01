@@ -2,7 +2,11 @@ import { View, ScrollView, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import { Ionicons, Octicons } from "@expo/vector-icons";
 import { color } from "../theme/color";
-import { PoppinsMedium, PoppinsSemiBold } from "./poppins-fonts";
+import {
+  PoppinsMedium,
+  PoppinsRegular,
+  PoppinsSemiBold,
+} from "./poppins-fonts";
 import { useRouter } from "expo-router";
 
 const MobileMenu = () => {
@@ -22,29 +26,34 @@ const MobileMenu = () => {
             className=" w-[77px] h-[77px] object-contain rounded-full"
           />
           {/* camera Icon */}
-          <TouchableOpacity className=" absolute top-[27px] right-[-12px]">
+          <TouchableOpacity className=" absolute top-[37px] right-[-9px]">
             <Ionicons name="camera" size={24} color={color.icon} />
           </TouchableOpacity>
         </View>
-        <PoppinsSemiBold className=" flex-1 text-center">
-          Amila Upul Kumara Wijesinghe
-        </PoppinsSemiBold>
+        <View className=" flex-1 pl-2">
+          <PoppinsSemiBold className=" w-full text-center">
+            A.U.K. Wijesinghe
+          </PoppinsSemiBold>
+          <PoppinsRegular className=" w-full text-center text-xs">
+            No 12, Jayasooriya Mawatha, Mathara.
+          </PoppinsRegular>
+        </View>
       </View>
       {/* menu items */}
       <View className=" w-full">
-        <MenuItem
+        {/* <MenuItem
           title="Home"
           pressFunction={() => router.push("/")}
           icon="home"
-        />
+        /> */}
         <MenuItem
           title="Account Summery"
-          pressFunction={() => router.push("/")}
+          pressFunction={() => router.push("/drawer/account-summary")}
           icon="hourglass"
         />
         <MenuItem
           title="Fund Transfers"
-          pressFunction={() => router.push("/")}
+          pressFunction={() => router.push("/drawer/fund-transfers")}
           icon="arrow-switch"
         />
         <MenuItem
@@ -107,6 +116,13 @@ const MobileMenu = () => {
           pressFunction={() => router.push("/")}
           icon="sign-out"
         />
+      </View>
+      {/* menu footer */}
+      <View className=" w-full mt-5 py-5 border-t border-t-gray-800 flex-row justify-between">
+        <View />
+        <PoppinsRegular className=" pr-4 pt-12 text-xs text-gray-400">
+          v 2.3.7
+        </PoppinsRegular>
       </View>
     </ScrollView>
   );
